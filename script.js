@@ -1,5 +1,5 @@
 const baseURL = 'https://exceed.superposition.pknn.dev'
-let state = {'door':'close','buzzer':'on','light':'on'}
+let state = {'door':'close','buzzer':'off','light':'off'}
 function get_data(){
     fetch (baseURL + '/data/newton')
       .then((res) => res.text())
