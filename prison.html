@@ -6,12 +6,13 @@
 			.head {
 				margin-top: 25px;
 				border-style: solid;
-				border-radius: 5px;
-				border-width: 3px;
+				border-radius: 10px;
+				border-width: 5px;
                 box-shadow: 0 0 10px rgb(100,100,100);
 				text-align: center;
 				height: 110px;
 				padding: 20px;
+				background: #CCCCCC;
 				font-size: 40px;
 				font-family: fantasy;
 				animation-name: appear;
@@ -23,6 +24,7 @@
 				font-family: fantasy;
 				margin-top: 15px;
 				border-style: solid;
+				border-width: 4px;
                 box-shadow: 0 0 4px rgb(100,100,100);
 				border-width: 3px;
 				height: 400px;
@@ -30,44 +32,33 @@
 				animation-name: appear;
   				animation-duration: 4s;
 			}
-			.button {
-				font-color: #FFFFAA;
-                background-color: #FFFFFF;
-                margin-top: 20px;
-                padding: 8px;
-                border-radius: 6px;
-                border: 1px solid rgb(240,232,232);
-			}
-            .button:active {
-                background-color: #FFDDDD;
-            }
             @keyframes appear {
   				from {opacity: 0.0;}
   				to {opacity: 1.0;}
 			}
 		</style>
 	</head>
-	<body>
+	<body background="https://media.gowallpaper.co.uk/media/catalog/product/n/i/nina_hancock_metal_panel_steel_blue_wallpaper_-_nh30000.jpg">
 		<script src="script.js"></script>
 		<div class = "container">
 			<div class = "row">
 				<div class = "col-12">
 					<div class = "head">
-						Control Panel
+						<font color="#333333">Control Panel</font>
 					</div>
 				</div>
 			</div>
 			<div class = "row">
 				<div class = "col-12 col-sm-6">
-					<div class = "box">
-						Toggle Prison Gate<br><br>
-						<img src="alarm_off(1).png" style="width:200px;height:200px">
+					<div class = "box" style = "background:#EEEEFF">
+						<font color="#333366"><u><b>Toggle Prison Gate</b></u></font><br><br>
+						<img id="door" onclick="toggle_door()" src="door-close.png" style="width:250px;height:250px">
 					</div>
 				</div>
 				<div class = "col-12 col-sm-6">
-					<div class = "box">
-						Turn Off Alarm<br><br>
-						<img src="alarm_off(1).png" style="width:200px;height:200px">
+					<div class = "box" style = "background:#FFEEEE">
+						<font color="#663333"><u><b>Turn Off Alarm</b></u></font><br><br>
+						<img id="alarm" onclick="alarm_off()" src="alarm_off(1).png" style="width:250px;height:250px">
 					</div>
 				</div>
 			</div>
