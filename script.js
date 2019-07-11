@@ -54,10 +54,32 @@ function post(){
     }
     switch (state['buzzer']){
         case 'on':
-            document.getElementById('alarm').src ='alarm_on(1).png';
+            blink();
             break;
         case 'off':
-                document.getElementById('alarm').src ='alarm_off(1).png';
+            document.getElementById('alarm').src ='alarm_off(1).png';
             break;
     }
+}
+function blink(){
+    x = 0.5; 
+
+    switch (document.getElementById('alarm').src){
+        case 'alarm_on(1).png':
+            document.getElementById('alarm').src ='alarm_off(1).png';
+            break;
+        case 'alarm_off(1).png':
+            document.getElementById('alarm').src ='alarm_on(1).png';
+            break;
+
+    }
+
+    setTimeout(refreshData, x*1000);
+}
+function refreshpost(){
+    x = 0.5;
+    get_data()
+    post()
+
+
 }
