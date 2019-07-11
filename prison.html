@@ -3,24 +3,73 @@
 		<title>Control Panel</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 		<style>
-			.col-5 {
+			.head {
 				margin-top: 25px;
 				border-style: solid;
 				border-radius: 5px;
 				border-width: 3px;
+                box-shadow: 0   4px 0 rgb(220,220,220),
+                           -4px 0   0 rgb(240,240,240),
+                            4px 0   0 rgb(240,240,240);
 				text-align: center;
+				height: 110px;
+				padding: 20px;
+				font-size: 40px;
+				font-family: fantasy;
+				animation-name: appear;
+  				animation-duration: 2s;
+			}
+			.box {
+				padding: 20px;
+				font-size: 30px;
+				font-family: fantasy;
+				margin-top: 15px;
+				border-style: solid;
+                box-shadow: 0   2px 0 rgb(220,220,220),
+                           -2px 0   0 rgb(240,240,240),
+                            2px 0   0 rgb(240,240,240);
+				border-width: 3px;
+				height: 500px;
+				text-align: center;
+				animation-name: appear;
+  				animation-duration: 4s;
+			}
+			.button {
+				font-color: #FFFFAA;
+                background-color: #FFFFFF;
+                margin-top: 20px;
+                padding: 8px;
+                border-radius: 6px;
+                border: 1px solid rgb(240,232,232);
+			}
+            .button:active {
+                background-color: #FFDDDD;
+            }
+            @keyframes appear {
+  				from {opacity: 0.0;}
+  				to {opacity: 1.0;}
 			}
 		</style>
 	</head>
 	<body>
 		<div class = "container">
 			<div class = "row">
-				<div class = "col-5" id = "button1">
-					Block 1
+				<div class = "col-12">
+					<div class = "head">
+						Control Panel
+					</div>
 				</div>
-				<div class = "col-1" id = "button2"></div>
-				<div class = "col-5" id = "button2">
-					Block 2
+			</div>
+			<div class = "row">
+				<div class = "col-12 col-sm-6">
+					<div class = "box">
+						Toggle Prison Gate<br><br>
+					</div>
+				</div>
+				<div class = "col-12 col-sm-6">
+					<div class = "box">
+						Turn Off Alarm
+					</div>
 				</div>
 			</div>
 		</div>
