@@ -1,11 +1,11 @@
 const baseURL = 'https://exceed.superposition.pknn.dev'
-let state = {'door':'close','buzzer':'off','light':'off'}
+let state = {'door':'close','buzzer':'on','light':'on'}
 function get_data(){
     fetch (baseURL + '/data/newton')
       .then((res) => res.text())
-      .then((data) => state = data)
+      .then((data) => state = JSON.parse(data))
       .catch((err) => console.log(err));
-      console.log(data)
+      
 }
 function toggle_door(){
     get_data()
@@ -18,12 +18,14 @@ function toggle_door(){
             break;
     }
     post()
+    get_data()
 }
 function alarm_off(){
     get_data()
     state['buzzer'] = 'off'
     state['light'] = 'off'
     post()
+    get_data()
 }
 
 function post(){
@@ -58,8 +60,4 @@ function post(){
                 document.getElementById('alarm').src ='alarm_off(1).png';
             break;
     }
-}
-function toggle_door(){
-    const status = get_data()
-    
 }
